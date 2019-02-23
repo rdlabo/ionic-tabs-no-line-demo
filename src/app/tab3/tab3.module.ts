@@ -10,7 +10,10 @@ import { Tab3Page } from './tab3.page';
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: Tab3Page }])
+    RouterModule.forChild([
+      { path: '', component: Tab3Page },
+      { path: 'tab3-sub', loadChildren: './tab3-sub/tab3-sub.module#Tab3SubPageModule' }
+      ])
   ],
   declarations: [Tab3Page]
 })
